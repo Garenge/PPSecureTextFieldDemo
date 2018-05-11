@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PPSecureTextField/PPSecureTextField.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    PPSecureTextField *secureField = [[PPSecureTextField alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
+    secureField.currentInput = ^(NSString *currentInput) {
+        NSLog(@"block回传:%@", currentInput);
+    };
+    [self.view addSubview:secureField];
 }
 
 

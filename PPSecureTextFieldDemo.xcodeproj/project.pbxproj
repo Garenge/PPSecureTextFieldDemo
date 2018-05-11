@@ -13,6 +13,7 @@
 		0C117F8A20A59EA2001B329B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C117F8920A59EA2001B329B /* Assets.xcassets */; };
 		0C117F8D20A59EA2001B329B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C117F8B20A59EA2001B329B /* LaunchScreen.storyboard */; };
 		0C117F9020A59EA3001B329B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C117F8F20A59EA3001B329B /* main.m */; };
+		0C117F9920A59EDE001B329B /* PPSecureTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C117F9820A59EDE001B329B /* PPSecureTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		0C117F8C20A59EA2001B329B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C117F8E20A59EA3001B329B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C117F8F20A59EA3001B329B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0C117F9720A59EDE001B329B /* PPSecureTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSecureTextField.h; sourceTree = "<group>"; };
+		0C117F9820A59EDE001B329B /* PPSecureTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSecureTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		0C117F7F20A59EA0001B329B /* PPSecureTextFieldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0C117F9620A59ED4001B329B /* PPSecureTextField */,
 				0C117F8020A59EA0001B329B /* AppDelegate.h */,
 				0C117F8120A59EA0001B329B /* AppDelegate.m */,
 				0C117F8320A59EA1001B329B /* ViewController.h */,
@@ -69,6 +73,15 @@
 				0C117F8F20A59EA3001B329B /* main.m */,
 			);
 			path = PPSecureTextFieldDemo;
+			sourceTree = "<group>";
+		};
+		0C117F9620A59ED4001B329B /* PPSecureTextField */ = {
+			isa = PBXGroup;
+			children = (
+				0C117F9720A59EDE001B329B /* PPSecureTextField.h */,
+				0C117F9820A59EDE001B329B /* PPSecureTextField.m */,
+			);
+			path = PPSecureTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +156,7 @@
 			files = (
 				0C117F8520A59EA1001B329B /* ViewController.m in Sources */,
 				0C117F9020A59EA3001B329B /* main.m in Sources */,
+				0C117F9920A59EDE001B329B /* PPSecureTextField.m in Sources */,
 				0C117F8220A59EA0001B329B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E7W6597ZYH;
 				INFOPLIST_FILE = PPSecureTextFieldDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E7W6597ZYH;
 				INFOPLIST_FILE = PPSecureTextFieldDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
