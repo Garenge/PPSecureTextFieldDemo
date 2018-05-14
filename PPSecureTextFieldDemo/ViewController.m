@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) PPSecureTextField *secureField;
+
 @end
 
 @implementation ViewController
@@ -21,7 +23,12 @@
     secureField.currentInput = ^(NSString *currentInput) {
         NSLog(@"block回传:%@", currentInput);
     };
+    self.secureField = secureField;
     [self.view addSubview:secureField];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.secureField.textField.text = [[NSDate date] description];
 }
 
 

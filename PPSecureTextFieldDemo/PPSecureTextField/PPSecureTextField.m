@@ -56,6 +56,7 @@ NSString *printNumSecureString(NSInteger length) {
         NSString *secureString = printNumSecureString(length);
         textField.text = secureString; // 这边是显示
     }];
+
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -79,9 +80,12 @@ NSString *printNumSecureString(NSInteger length) {
                 
                 if(range.length == 0) {
                     // 一个字符
+                    // 或者是粘贴的字符串
                     if(range.location < MAXLENGTH) {
                         // 保证数组不越界
-                        secureArray[range.location] = *tempString;
+                        for(NSInteger index = 0; index < string.length; index ++) {
+                            secureArray[index] = *(tempString + index);
+                        }
                     }
                 } else {
                     // 多个字符, 从第一个开始逐个替换
@@ -116,5 +120,6 @@ NSString *printNumSecureString(NSInteger length) {
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:_observer];
 }
+
 
 @end
